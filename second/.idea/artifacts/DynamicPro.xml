@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="DynamicPro">
+    <output-path>$PROJECT_DIR$/out/artifacts/DynamicPro</output-path>
+    <root id="root" />
+  </artifact>
+</component>

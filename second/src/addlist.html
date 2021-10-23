@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登记新图书页面</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/addlist.css" />
+    <script src="./js/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 侧边栏 -->
+    <div class="Left">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="./login.html">首页</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./list.html">图书列表</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">添加图书</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">关于</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 右边 -->
+    <div class="Right">
+      <h1>登记新图书页面</h1>
+      <!-- 添加图书的Panel面板 -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">添加新图书</h3>
+        </div>
+        <div class="panel-body form-inline">
+          <div class="input-group">
+            <div class="input-group-addon">书名</div>
+            <input type="text" class="form-control bk-name" id="iptBookname" placeholder="请输入书名" />
+            <p class="bk-name-msg"></p>
+          </div>
+
+          <div class="input-group">
+            <div class="input-group-addon">作者</div>
+            <input type="text" class="form-control ath-name" id="iptAuthor" placeholder="请输入作者" />
+            <p class="ath-name-msg"></p>
+          </div>
+
+          <div class="input-group">
+            <div class="input-group-addon">出版社</div>
+            <input type="text" class="form-control pub-name" id="iptPublisher" placeholder="请输入出版社" />
+            <p class="pub-name-msg"></p>
+          </div>
+
+          <div class="input-group">
+            <div class="input-group-addon">出版日期</div>
+            <input type="date" class="form-control pub-date" id="iptPublisher" placeholder="" />
+            <p class="pub-date-msg"></p>
+          </div>
+
+          <div class="input-group">
+            <div class="input-group-addon">库存数量</div>
+            <input type="number" class="form-control bk-num" id="iptPublisher" placeholder="请输入库存数量" />
+            <p class="bk-num-msg"></p>
+          </div>
+
+          <div class="input-group">
+            <label for="exampleInputFile">图书封面</label>
+            <input type="file" id="exampleInputFile" />
+          </div>
+
+          <button type="submit" id="btnAdd" class="btn btn-primary">添加</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var bkName = document.querySelector('.bk-name')
+    var bkNameMsg = document.querySelector('.bk-name-msg')
+    var athName = document.querySelector('.ath-name')
+    var athNameMsg = document.querySelector('.ath-name-msg')
+    var pubName = document.querySelector('.pub-name')
+    var pubNameMsg = document.querySelector('.pub-name-msg')
+    var bkNum = document.querySelector('.bk-num')
+    var bkNumMsg = document.querySelector('.bk-num-msg')
+    var pubDate = document.querySelector('.pub-date')
+    var pubDateMsg = document.querySelector('.pub-date-msg')
+    //注册事件 失去焦点
+    bkName.onblur = function () {
+      // 根据表单里面值的长度 ipt.value.length
+      if (this.value == '') {
+        bkNameMsg.className = 'message wrong'
+        bkNameMsg.innerHTML = '请输入书名！'
+      } else {
+        bkNameMsg.className = 'message right'
+        bkNameMsg.innerHTML = 'ok'
+      }
+    }
+
+    athName.onblur = function () {
+      // 根据表单里面值的长度 ipt.value.length
+      if (this.value == '') {
+        athNameMsg.className = 'message wrong'
+        athNameMsg.innerHTML = '请输入姓名！'
+      } else {
+        athNameMsg.className = 'message right'
+        athNameMsg.innerHTML = 'ok'
+      }
+    }
+    pubName.onblur = function () {
+      // 根据表单里面值的长度 ipt.value.length
+      if (this.value == '') {
+        pubNameMsg.className = 'message wrong'
+        pubNameMsg.innerHTML = '请输入出版社！'
+      } else {
+        pubNameMsg.className = 'message right'
+        pubNameMsg.innerHTML = 'ok'
+      }
+    }
+    bkNum.onblur = function () {
+      // 根据表单里面值的长度 ipt.value.length
+      if (this.value == '') {
+        bkNumMsg.className = 'message wrong'
+        bkNumMsg.innerHTML = '请输入库存数量！'
+      } else if (this.value < 0) {
+        bkNumMsg.className = 'message wrong'
+        bkNumMsg.innerHTML = '库存数量不能小于0'
+      } else {
+        bkNumMsg.className = 'message right'
+        bkNumMsg.innerHTML = 'ok'
+      }
+    }
+    let date = new Date()
+    pubDate.onblur = function () {
+      // 根据表单里面值的长度 ipt.value.length
+      // console.log(this.value)
+      if (this.value == '') {
+        pubDateMsg.className = 'message wrong'
+        pubDateMsg.innerHTML = '请选择出版日期！'
+      } else if (new Date(this.value).getTime() > date.getTime()) {
+        pubDateMsg.className = 'message wrong'
+        pubDateMsg.innerHTML = '出版日期不能晚于当前日期'
+      } else {
+        pubDateMsg.className = 'message right'
+        pubDateMsg.innerHTML = 'ok'
+        console.log()
+      }
+    }
+  </script>
+</html>

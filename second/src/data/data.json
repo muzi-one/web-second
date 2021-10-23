@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1, 
+        "bookname": "红楼梦", 
+        "author": "曹雪芹", 
+        "publisher": "人民文学出版社", 
+        "date": "1996-12"
+    }, 
+    {
+        "id": 2, 
+        "bookname": "活着", 
+        "author": "余华", 
+        "publisher": "作家出版社", 
+        "date": "2012-8-1"
+    }, 
+    {
+        "id": 3, 
+        "bookname": "百年孤独", 
+        "author": "范晔", 
+        "publisher": "南海出版公司", 
+        "date": "2011-6"
+    }, 
+    {
+        "id": 4, 
+        "bookname": "1984", 
+        "author": "刘绍铭", 
+        "publisher": "北京十月文艺出版社", 
+        "date": "2010-4-1"
+    }, 
+    {
+        "id": 5, 
+        "bookname": "飘", 
+        "author": "李美华", 
+        "publisher": "译林出版社", 
+        "date": "2000-9"
+    }, 
+    {
+        "id": 6, 
+        "bookname": "三体全集", 
+        "author": "刘慈欣", 
+        "publisher": "重庆出版社", 
+        "date": "2012-1-1"
+    }, 
+    {
+        "id": 7, 
+        "bookname": "三国演义（全二册）", 
+        "author": "[明] 罗贯中", 
+        "publisher": "人民文学出版社", 
+        "date": "1998-05"
+    }, 
+    {
+        "id": 8, 
+        "bookname": "白夜行", 
+        "author": "刘姿君", 
+        "publisher": "南海出版公司", 
+        "date": "2008-9"
+    }, 
+    {
+        "id": 9, 
+        "bookname": "小王子", 
+        "author": "马振聘", 
+        "publisher": "人民文学出版社", 
+        "date": "2003-8"
+    }, 
+    {
+        "id": 10, 
+        "bookname": "房思琪的初恋乐园", 
+        "author": "林奕含", 
+        "publisher": "北京联合出版公司", 
+        "date": "2018-2"
+    }
+]
